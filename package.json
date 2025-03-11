@@ -1,0 +1,23 @@
+{
+  "name": "liatrio-exercise-jackm",
+  "version": "1.0.0",
+  "description": "Liatrio Apprenticeship Interview Exercise 2025",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack-mumford/Liatrio-Exercise-JackM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jack-mumford/Liatrio-Exercise-JackM/issues"
+  },
+  "homepage": "https://github.com/jack-mumford/Liatrio-Exercise-JackM#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
