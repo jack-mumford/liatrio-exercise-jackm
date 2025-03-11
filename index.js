@@ -1,8 +1,9 @@
 // Jack Mumford 2025
 
 // Using express
-const app = require('express')();
-const PORT = 8080;
+const express = require(`express`);
+const app = express();
+const PORT = 80;
 
 // Grab Date
 const now = new Date();
@@ -14,10 +15,15 @@ var jackMumford = `{
 "timestamp": "${time}"
 }`;
 
+// Information to send
+app.get(`/`, (req, res) => {
+    res.send(JSON.stringify(JSON.parse(jackMumford))); // This is how I minified the string
+});
+
 // Telling the port to listen
 app.listen(
     PORT,
-    () => console.log(JSON.stringify(JSON.parse(jackMumford)))
+    () => console.log(`it's alive on http://localhost:${PORT}`)
 );
 
 //JSON.stringify(JSON.parse(jackMumford))
