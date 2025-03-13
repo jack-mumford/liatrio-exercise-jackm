@@ -38,7 +38,7 @@ jobs:
 
       - name: Test
         run: |
-          docker run -p 80:80 --rm ${{ env.TEST_TAG }}
+          docker run -p 80:80 ${{ env.TEST_TAG }}
         
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
