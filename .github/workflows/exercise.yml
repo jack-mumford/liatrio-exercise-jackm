@@ -21,7 +21,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t liatrio-exercise-jackm:latest .
+      run: docker build -t liatrio-exercise-jackm .
     - name: Push to Dockerhub
       run: docker push mumfford/liatrio-exercise-jackm:latest
     - name: run tests
