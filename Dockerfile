@@ -5,19 +5,19 @@ RUN mkdir -p /user/src/docsify
 
 ## Container dnvironment variables
 ENV DEBUG 1
-ENV PORT 3000
+ENV PORT 80
 ENV DOCSIFY_VERSION latest
 ENV NODE_VERSION alpine
 
 # Copy docsify files
-COPY . /usr/src/docsify
+COPY . /user/src/docsify
 
 ## Container runtime configuration
-EXPOSE 3000
+EXPOSE 80
 WORKDIR /user/src/docsify
 
 ## Container entry point
-ENTRYPOINT [ "docsify", "serve", "--port", "3000" ]
+ENTRYPOINT [ "docsify", "serve", "--port", "80" ]
 
 ## Container entry point default arguments
 CMD [ "." ]
