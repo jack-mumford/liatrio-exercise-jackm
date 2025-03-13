@@ -23,6 +23,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t liatrio-exercise-jackm .
     - name: Push to Dockerhub
-      run: docker push jack-mumford/liatrio-exercise-jackm:lastest
+      run: docker push mumfford/liatrio-exercise-jackm:lastest
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
