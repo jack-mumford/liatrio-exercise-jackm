@@ -1,23 +1,19 @@
-FROM node:alpine
+FROM node:16.20.2-alpine
 
-RUN npm install -g docsify-cli@latest
-RUN mkdir -p /user/src/docsify
 
-## Container dnvironment variables
-ENV DEBUG 1
-ENV PORT 80
-ENV DOCSIFY_VERSION latest
-ENV NODE_VERSION alpine
+WORKDIR /user/src/index
 
-# Copy docsify files
-COPY . /user/src/docsify
 
-## Container runtime configuration
+COPY package*.json ./
+
+
+RUN npm install
+
+
+COPY . .
+
+
 EXPOSE 80
-WORKDIR /user/src/docsify
 
-## Container entry point
-ENTRYPOINT [ "docsify", "serve", "--port", "80" ]
 
-## Container entry point default arguments
-CMD [ "." ]
+CMD ["node", "index.js"]
