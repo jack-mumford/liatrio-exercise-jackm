@@ -56,5 +56,6 @@ jobs:
       - name: Build and export to Docker LATEST
         uses: docker/build-push-action@v6
         with:
-          load: true
+          platforms: linux/amd64,linux/arm64
+          push: true
           tags: ${{ env.LATEST_TAG }}
