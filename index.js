@@ -11,7 +11,7 @@ const time = Math.floor(Date.now() / 1000);
 //String to be minified
 var jackMumford = `{
 "message": "My name is Jack Mumford",
-"timestamp": "${time}"
+"timestamp": "${time.toString()}"
 }`;
 
 // Information to send
