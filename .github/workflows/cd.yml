@@ -1,0 +1,21 @@
+name: Docker Image CD
+
+on:
+  workflow-run:
+    workflows: ["Docker Image CI"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: self-hosted
+    
+    steps:
+    - name: Pull docker image
+      run: docker pull mumfford/liatrio-exercise-jackm:latest
+    - name: delete old docker image
+      run: sudo docker rm -f mumfford/liatrio-exercise-jackm || true
+    - name: Run docker image
+      run: docker run -d -p 80:80 mumfford/liatrio-exercise-jackm:latest
+
+  
