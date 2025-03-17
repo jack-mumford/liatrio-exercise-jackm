@@ -6,8 +6,7 @@ const app = express();
 const PORT = 80;
 
 // Grab Date
-const now = new Date();
-const time = now.toLocaleTimeString();
+const time = Math.floor(Date.now() / 1000);
 
 //String to be minified
 var jackMumford = `{
@@ -25,6 +24,3 @@ app.listen(
     PORT,
     () => console.log(`it's alive on http://localhost:${PORT}`)
 );
-
-//JSON.stringify(JSON.parse(jackMumford))
-// `it's alive on http://localhost:${PORT}`
