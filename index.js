@@ -11,11 +11,12 @@ app.get(`/`, (req, res) => {
     const time = Math.floor(Date.now() / 1000);
 
     //String to be minified
-    var jackMumford = `{
-"message": "My name is Jack Mumford",
-"timestamp": "${time.toString()}"
-}`;
-    res.send(JSON.stringify(JSON.parse(jackMumford))); // This is how I minified the string
+    // Object to be sent
+    const jackMumford = {
+        message: "My name is Jack Mumford",
+        timestamp: time
+    };
+    res.json(jackMumford); // Send JSON response // This is how I minified the string
 });
 
 // Telling the port to listen
