@@ -8,7 +8,7 @@ const PORT = 80;
 // Information to send
 app.get(`/`, (req, res) => {
     // Grab Date
-    const time = Math.floor(Date.now() / 1000);
+    const time = Date.now();
 
     //String to be minified
     // Object to be sent
