@@ -3,7 +3,7 @@
 // Using express
 const express = require(`express`);
 const app = express();
-const PORT = 8080;
+const PORT = 80;
 
 // Information to send
 app.get(`/`, (req, res) => {

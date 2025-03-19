@@ -43,7 +43,7 @@ jobs:
 
       - name: Run container in background
         run: |
-          docker run --name test_container -d -p 8080:8080 ${{ env.TEST_TAG }}
+          docker run --name test_container -d -p 80:80 ${{ env.TEST_TAG }}
 
       - name: Run tests
         uses: liatrio/github-actions/apprentice-action@v1.0.0
