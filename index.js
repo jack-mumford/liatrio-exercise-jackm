@@ -16,7 +16,8 @@ app.get(`/`, (req, res) => {
     const jackMumford = {
         message: "My name is Jack Edward Mumford",
         timestamp: time,
-        extracredit: githubSHA
+        extracredit: githubSHA,
+        extracredit1: "done"
     };
     res.json(jackMumford); // Send JSON response // This is how I minified the string
 });
