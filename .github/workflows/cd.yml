@@ -13,8 +13,12 @@ jobs:
     steps:
     - name: Pull docker image
       run: sudo docker pull mumfford/liatrio-exercise-jackm:latest
-    - name: delete old docker image
-      run: sudo docker rm -f mumfford/liatrio-exercise-jackm || true
+      
+    - name: Stop and remove any running container
+      run: |
+        sudo docker ps -q | xargs -r sudo docker stop
+        sudo docker ps -a -q | xargs -r sudo docker rm
+
     - name: Run docker image
       run: sudo docker run -d -p 80:80 mumfford/liatrio-exercise-jackm:latest
 
