@@ -9,12 +9,15 @@ const PORT = 80;
 app.get(`/`, (req, res) => {
     // Grab Date
     const time = Date.now();
+    // have dynamic field for xtraCred
+    const githubWorkflow = process.env.GITHUB_WORKFLOW;
 
     //String to be minified
     // Object to be sent
     const jackMumford = {
         message: "My name is Jack Edward Mumford",
-        timestamp: time
+        timestamp: time,
+        extracredit: githubWorkflow
     };
     res.json(jackMumford); // Send JSON response // This is how I minified the string
 });
