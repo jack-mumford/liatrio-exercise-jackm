@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
+    branches: [ "main" ]
 
 env:
-  TEST_TAG: mumfford/liatrio-exercise-jackm:test
   LATEST_TAG: mumfford/liatrio-exercise-jackm:latest
 
 jobs:
@@ -28,22 +28,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build and push TEST
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ env.TEST_TAG }}
+      - name: Build docker img
+        run: docker build -t ${{ env.LATEST_TAG }}
 
       - name: Run container in background
         run: |
-          docker run --name test_container -d -p 80:80 ${{ env.TEST_TAG }}
+          docker run --name test_container -d -p 80:80 ${{ env.LATEST_TAG }}
 
       - name: Run tests
         uses: liatrio/github-actions/apprentice-action@v1.0.0
