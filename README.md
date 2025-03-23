@@ -1,23 +1,19 @@
 # Liatrio-Exercise-JackM
 Liatrio Apprenticeship Interview Exercise 2025
 
-Once you've cloned the repository, create an AWS ec2 instance and run it with ubuntu, rather than amazon linux
+Once you've cloned the repository, create an AWS ec2 instance and run it with ubuntu, rather than amazon linux.
 
 ![Screenshot 2025-03-22 at 11 55 53 PM](https://github.com/user-attachments/assets/e52a9337-3618-4b71-be95-ac16c6b50bdf)
 
-Make sure you create a new key and move the .pem into the repository on your personal machine
+Make sure you create a new key and move the .pem into the repository on your personal machine.
 
 ![Screenshot 2025-03-22 at 11 57 24 PM](https://github.com/user-attachments/assets/85bf823a-fd37-4130-8363-92647e309b99)
 
-Then, ssh into the newly created ec2 instance
+Then, ssh into the newly created ec2 instance.
 
 ![Screenshot 2025-03-22 at 11 54 40 PM](https://github.com/user-attachments/assets/773e72ec-f220-43a0-9420-c411b86b0154)
 
-Once you are connected, update the terminal
-```
-sudo apt-get update
-```
-Then, install docker engine
+Once you are connected, install docker engine.
 ```
 # Add Docker's official GPG key:
 sudo apt-get update
