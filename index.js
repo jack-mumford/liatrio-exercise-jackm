@@ -13,7 +13,7 @@ app.get(`/`, (req, res) => {
 
     //String to be minified and sent
     const jackMumford = {
-        message: "My name is Jack Edward Mumford",
+        message: "My name is Jack E. Mumford",
         timestamp: time,
         extracredit: "done"
     };
