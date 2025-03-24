@@ -1,6 +1,15 @@
 # Liatrio-Exercise-JackM
 Liatrio Apprenticeship Interview Exercise 2025
 
+If you want to run locally, use this command after cloning the repository to build
+```
+docker buildx build -t "replace with name" .
+```
+Then run it
+```
+docker run -d -p 80:80 -t "given name of build"
+```
+
 Once you've cloned the repository, create an AWS ec2 instance and run it with ubuntu, rather than amazon linux.
 
 ![Screenshot 2025-03-22 at 11 55 53 PM](https://github.com/user-attachments/assets/e52a9337-3618-4b71-be95-ac16c6b50bdf)
@@ -8,6 +17,10 @@ Once you've cloned the repository, create an AWS ec2 instance and run it with ub
 Make sure you create a new key and move the .pem into the repository on your personal machine.
 
 ![Screenshot 2025-03-22 at 11 57 24 PM](https://github.com/user-attachments/assets/85bf823a-fd37-4130-8363-92647e309b99)
+
+Once this is done, check these 3 boxes before running the instance
+
+![image](https://github.com/user-attachments/assets/b6769bde-2300-4e23-a348-c807d97c9bed)
 
 Then, ssh into the newly created ec2 instance.
 
