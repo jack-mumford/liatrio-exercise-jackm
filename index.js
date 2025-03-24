@@ -12,7 +12,7 @@ app.get(`/`, (req, res) => {  // Define a route for the root URL
 
     //String to be minified and sent
     const jackMumford = {  // Create an object with the message and timestamp
-        message: "My name is Jack E. Mumford",  // Message to be sent
+        message: "My name is Jack Edward Mumford",  // Message to be sent
         timestamp: time,
         extracredit: "done"
     };
