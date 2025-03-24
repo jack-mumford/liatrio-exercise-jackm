@@ -1,6 +1,6 @@
 name: Docker Image CD
 
-on:
+on: # trigger workflow on completion of the Docker Image CI workflow
   workflow_run:
     workflows: ["Docker Image CI"]
     types:
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: self-hosted
     
-    steps:
+    steps: # pulling from dockerhub repo and NOT github repo
     - name: Pull docker image
       run: sudo docker pull mumfford/liatrio-exercise-jackm:latest
       
